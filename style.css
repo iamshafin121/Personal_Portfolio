@@ -211,7 +211,6 @@ body {
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  /* animation: float 2s ease-in-out infinite; */
 }
 
 .floating-card img {
@@ -219,16 +218,6 @@ body {
   height: auto;
   border-radius: calc(var(--border-radius) - 0.5rem);
 }
-
-/* @keyframes float { */
-/*   0%, */
-/*   100% { */
-/*     transform: translateY(0px); */
-/*   } */
-/*   50% { */
-/*     transform: translateY(-20px); */
-/*   } */
-/* } */
 
 /* Social Links */
 .social-links {
@@ -329,4 +318,137 @@ body {
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-card);
+}
+
+/* Skills Section */
+
+.skills-section h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.skill-category h4 {
+  font-size: 1.125rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Experience Section */
+
+.experience {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+.option-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-gradient);
+  border-radius: 4px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
