@@ -683,7 +683,10 @@ body {
   .hero-title {
     font-size: 2.5rem;
   }
-
+  .hero-subtitle {
+    /* text-align: center; */
+    justify-self: center;
+  }
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
